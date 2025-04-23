@@ -26,9 +26,9 @@ const Navbar = () => {
 
   return (
     <div className="flex justify-between items-center px-4 md:px-10 lg:px-20 py-5  bg-white ">
-      <div>
-        <Image src="/images/image1.png" alt="Logo" width={100} height={100} />
-      </div>
+      <Link href="/">
+        <Image src="/images/logo.png" alt="Logo" width={100} height={100} />
+      </Link>
 
       <div className="lg:hidden">
         <Sheet open={sheetOpen} onOpenChange={setSheetOpen}>

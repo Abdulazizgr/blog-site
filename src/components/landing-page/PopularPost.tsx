@@ -1,48 +1,42 @@
-import { Button } from "../ui/button";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
 import Image from "next/image";
+import { Button } from "../ui/button";
+import BlogCard from "../blogCard";
+import data from "@/app/data/data";
 
 const PopularPost = () => {
+  const popularPosts = data.filter((post) => post.Category === "Popular");
+  const popularPostsData = popularPosts.slice(0, 6);
   return (
-    <div className="flex flex-col px-28 py-10 gap-4">
-      <div className="flex flex-row justify-between ">
-        <h2 className="text-3xl font-bold">Popular Post </h2>
-        <Button className="bg-primary-purple text-white  hover:bg-primary-purple/95 hover:text-white">
+    <section className="flex flex-col items-center py-10 px-4 md:px-10 lg:px-20">
+      <div className="flex  items-center justify-between gap-4  w-full mb-16">
+        <h2 className="font-bold text-md sm:text-2xl md:text-4xl">
+          Popular Post
+        </h2>
+        <Button
+          type="submit"
+          variant="outline"
+          className=" border-2 text-xs sm:text-sm border-white bg-primary-purple hover:bg-primary-purple/90 hover:text-white text-white"
+        >
           View All
         </Button>
       </div>
-
-      <div className="grid grid-cols-3 gap-8 ">
-        <div className="">
-          <Image
-            src="/images/image5.avif"
-            alt="image5"
-            width={10}
-            height={10}
-            layout="responsive"
-            className="rounded-lg shadow-lg "
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-7 w-full ">
+        {popularPostsData.map((post) => (
+          <BlogCard
+            key={post._id}
+            blogData={{
+              id: post._id,
+              title: post.Title,
+              description: post.Description,
+              image: post.postImg,
+              tag: post.Tag,
+              category: post.Category,
+              date: post.Created_at,
+            }}
           />
-        </div>
-        <Card>
-          <CardHeader>
-            <CardDescription>Card Description</CardDescription>
-          </CardHeader>
-          <CardContent>
-            <p>Card Content</p>
-          </CardContent>
-          <CardFooter>
-            <p>Card Footer</p>
-          </CardFooter>
-        </Card>
+        ))}
       </div>
-    </div>
+    </section>
   );
 };
 

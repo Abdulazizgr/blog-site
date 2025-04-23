@@ -7,7 +7,7 @@ const FeaturedPost = () => {
       <div className="flex flex-col md:flex-row gap-10 w-full p-5  border-2 md:border-none rounded-2xl shadow-sm md:shadow-none">
         <div className="w-full md:w-1/2">
           <Image
-            src="/images/image4.avif"
+            src="/images/image1.avif"
             alt="Futuristic AI-powered home robot"
             width={600}
             height={400}

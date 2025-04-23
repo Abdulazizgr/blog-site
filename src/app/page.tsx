@@ -12,7 +12,7 @@ export default function Home() {
       <FeaturedPost />
       <RecentPost />
       {/* <FeaturedPost /> */}
-      {/* <PopularPost /> */}
+      <PopularPost />
     </>
   );
 }

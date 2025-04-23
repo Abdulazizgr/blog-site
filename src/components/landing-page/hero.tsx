@@ -26,7 +26,7 @@ const Hero = () => {
         </div>
         <div className="flex justify-center lg:pt-24 xl:pt-0  items-center w-full lg:w-1/2">
           <Image
-            src="/images/image6.jpg"
+            src="/images/hero-image.jpg"
             alt="Futuristic AI-powered home robot"
             title="Futuristic AI-powered home robot"
             width={500}
