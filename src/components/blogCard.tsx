@@ -1,51 +1,52 @@
 import {
   Card,
-  CardHeader,
   CardContent,
-  CardFooter,
   CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
 } from "@/components/ui/card";
 import Image from "next/image";
-
+import Link from "next/link";
 const BlogCard = () => {
   return (
-    <div className="grid grid-cols-3 gap-8">
-      <Card className="rounded-lg shadow-lg overflow-hidden">
-        {/* Image Section */}
-        <div className="relative w-full h-48">
-          <Image
-            src="/images/image5.avif"
-            alt="Train on a bridge in a scenic landscape"
-            width={300}
-            height={200}
-          />
-        </div>
+    <div className=" py-10">
+      <Card className="flex flex-col items-start  border-none shadow-none ">
+        <Image
+          src="/images/image4.avif"
+          alt="Blog Image"
+          width={600}
+          height={400}
+          className="rounded-2xl shadow-lg w-full h-80 object-cover "
+          loading="lazy"
+        />
 
-        {/* Card Content Section */}
-        <CardHeader className="pt-4 pb-2">
-          <CardDescription className="text-sm text-gray-500">
-            Travel 13 March 2023
-          </CardDescription>
+        <CardHeader className="px-2 pt-10">
+          <p className="text-sm text-gray-600 pb-2">
+            <strong>DEVELOPMENT</strong>{" "}
+            <span className="pl-2">16 March 2023</span>
+          </p>
+          <CardTitle>
+            <h2 className="text-lg sm:text-xl lg:text-2xl text-dark">
+              8 Rules of Travelling In Sea You Need To Know
+            </h2>
+          </CardTitle>
         </CardHeader>
-
-        <CardContent className="pb-2">
-          <h3 className="text-xl font-bold mb-2">
-            Train Or Bus Journey? Which one suits?
-          </h3>
-          <p className="text-gray-700 text-sm">
-            The choice between a train or bus journey depends on various factors
-            such as the distance of the journey, the time available, the cost,
-            and personal preference.
+        <CardContent className="px-2">
+          <p className="  text-xs sm:text-base text-medium">
+            Travelling in sea has many advantages. Some of the advantages of
+            transporting goods by sea include: you can ship large volumes at
+            costs{" "}
           </p>
         </CardContent>
-
-        <CardFooter className="pt-2">
-          <a
-            href="#"
-            className="text-purple-600 text-sm font-semibold hover:underline"
+        <CardFooter className="px-2">
+          <Link
+            href="/blog/1"
+            className="text-primary-purple text-sm sm:text-bases"
           >
-            Read More...
-          </a>
+            {" "}
+            Read more ...
+          </Link>
         </CardFooter>
       </Card>
     </div>
