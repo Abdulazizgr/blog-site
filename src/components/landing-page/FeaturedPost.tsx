@@ -3,7 +3,7 @@ import Image from "next/image";
 
 const FeaturedPost = () => {
   return (
-    <div className="flex flex-col items-center py-10 px-4 md:px-10 lg:px-20">
+    <div className="flex flex-col items-center py-10 px-4 md:px-10 lg:px-20 ">
       <div className="flex flex-col md:flex-row gap-10 w-full p-5  border-2 md:border-none rounded-2xl shadow-sm md:shadow-none">
         <div className="w-full md:w-1/2">
           <Image

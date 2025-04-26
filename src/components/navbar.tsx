@@ -39,7 +39,7 @@ const Navbar = () => {
           </SheetTrigger>
           <SheetContent className="w-[250px] sm:w-[400px] p-6">
             <DialogTitle className="text-lg font-bold text-gray-800 mb-4">
-              Menu
+              {/* Menu */}
             </DialogTitle>
             <div className="flex flex-col items-start gap-6 mt-6">
               {links.map((link) => (
