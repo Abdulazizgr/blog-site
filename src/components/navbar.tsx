@@ -20,9 +20,12 @@ const Navbar = () => {
   const pathname = usePathname();
 
   const links = [
+    { href: "/", label: "Home" },
     { href: "/blog", label: "Blog" },
     { href: "/about", label: "About" },
   ];
+
+  pathname === "/" ? "/home" : pathname;
 
   return (
     <div className="flex justify-between items-center px-4 md:px-10 lg:px-20 py-5  bg-white ">
@@ -117,12 +120,14 @@ const Navbar = () => {
             </Button>
             <Input className={`${isOpen ? "hidden" : "block"} w-48`} />
           </div>
-          <Button
-            variant="default"
-            className="bg-primary-purple hover:bg-primary-purple/90 text-white "
-          >
-            Contact Us
-          </Button>
+          <Link href="/contact">
+            <Button
+              variant="default"
+              className="bg-primary-purple hover:bg-primary-purple/90 text-white "
+            >
+              Contact Us
+            </Button>
+          </Link>
         </div>
       </div>
     </div>

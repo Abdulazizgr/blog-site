@@ -25,7 +25,7 @@ const BlogCard = ({ blogData }: { blogData: BlogCardProps }) => {
 
   return (
     <div className="">
-      <Card className="flex flex-col items-start border-none  shadow-none ">
+      <Card className="flex flex-col items-start border-none  shadow-none  bg-[#FAFAFA]">
         <Image
           src={image}
           alt="Blog Image"
@@ -40,18 +40,20 @@ const BlogCard = ({ blogData }: { blogData: BlogCardProps }) => {
             <strong>{tag}</strong> <span className="pl-2">{date}</span>
           </p>
           <CardTitle>
-            <h2 className="text-lg sm:text-xl lg:text-2xl text-dark">
+            <h2 className="text-lg sm:text-xl lg:text-2xl text-dark line-clamp-2">
               {title}
             </h2>
           </CardTitle>
         </CardHeader>
         <CardContent className="px-2">
-          <p className="  text-xs sm:text-base text-medium">{description}</p>
+          <p className="  text-sm sm:text-base text-medium line-clamp-3">
+            {description}
+          </p>
         </CardContent>
         <CardFooter className="px-2">
           <Link
             href="/blog/1"
-            className="text-primary-purple text-sm sm:text-bases md:text-lg"
+            className="text-primary-purple text-lg sm:text-bases md:text-lg"
           >
             {" "}
             Read more ...

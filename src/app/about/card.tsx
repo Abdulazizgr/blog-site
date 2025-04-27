@@ -31,12 +31,12 @@ const cardData = [
 
 const Cards = () => {
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-7 w-full mt-10">
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-7 w-full mt-10 ">
       {/* // <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4"> */}
       {cardData.map((card) => (
         <Card
           key={card.id}
-          className="border-none shadow-none hover:shadow-lg transition-all duration-300 hover:bg-primary-purple group"
+          className="bg-[#FAFAFA] border-none shadow-none hover:shadow-lg transition-all duration-300 hover:bg-primary-purple group"
         >
           <CardHeader>
             <CardTitle className="text-medium opacity-[10%] group-hover:opacity-[100%] text-5xl heading lg:text-7xl transition-colors duration-300 group-hover:text-white">
@@ -47,7 +47,7 @@ const Cards = () => {
             </CardDescription>
           </CardHeader>
           <CardContent>
-            <p className="text-base  text-medium opacity-[70%]  transition-colors duration-300 group-hover:text-[#F7F6FE] group-hover:opacity-[70%]">
+            <p className="text-base  text-medium opacity-[70%]  transition-colors duration-300 group-hover:text-[#F7F6FE] group-hover:opacity-[70%] line-clamp-5">
               {card.description}
             </p>
           </CardContent>

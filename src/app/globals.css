@@ -78,6 +78,7 @@
 body {
   font-family: "Roboto", sans-serif;
   font-weight: 400; /* Regular weight */
+  background-color: #fafafa;
 }
 
 /* Apply Raleway to headings */

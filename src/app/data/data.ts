@@ -57,7 +57,7 @@ export const data = [
       "A step-by-step guide to launching a successful export-import business from the comfort of your home.",
     postImg: "/images/image6.avif",
     Tag: "Business",
-    Category: "Featured",
+    Category: "Popular",
     Created_at: "2025-04-23T11:00:00Z",
   },
   {
@@ -87,19 +87,19 @@ export const data = [
       "Tips and strategies for creating an impressive UI/UX portfolio to land your dream job in design.",
     postImg: "/images/image11.avif",
     Tag: "Career",
-    Category: "Featured",
+    Category: "Popular",
     Created_at: "2025-04-23T11:45:00Z",
   },
-  // {
-  //   _id: "9",
-  //   Title: "How to Be a Professional Footballer in 2023",
-  //   Description:
-  //     "A comprehensive guide to developing the skills, mindset, and network needed to become a professional footballer in 2023.",
-  //   postImg: "/images/image10.avif",
-  //   Tag: "Sports",
-  //   Category: "Recent",
-  //   Created_at: "2025-04-23T12:00:00Z",
-  // },
+  {
+    _id: "9",
+    Title: "How to Be a Professional Footballer in 2023",
+    Description:
+      "A comprehensive guide to developing the skills, mindset, and network needed to become a professional footballer in 2023.",
+    postImg: "/images/image10.avif",
+    Tag: "Sports",
+    Category: "Popular",
+    Created_at: "2025-04-23T12:00:00Z",
+  },
 ];
 
 export default data;

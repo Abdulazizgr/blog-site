@@ -10,7 +10,7 @@ const Footer = () => {
     { href: "/contact", label: "Contact" },
   ];
   return (
-    <div className="flex flex-col justify-center items-center gap-8 px-4 md:px-10 lg:px-20 py-12">
+    <div className="flex flex-col justify-center items-center gap-8 px-4 md:px-10 lg:px-20 py-12 bg-white">
       <div className="flex justify-center items-center ">
         <Image
           src="/images/image1.png"

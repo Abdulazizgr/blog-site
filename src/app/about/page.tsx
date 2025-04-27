@@ -25,9 +25,9 @@ const AboutPage = () => {
         className="rounded-2xl shadow-lg w-full h-auto lg:h-[550px]  object-cover"
       />
 
-      <div className="flex flex-col justify-center items-start gap-10">
+      <div className="flex flex-col justify-center items-start gap-4 md:gap-10">
         <p className="text-medium">HOW WE WORK</p>
-        <div className="flex flex-col md:flex-row  justify-between items-start w-full gap-8">
+        <div className="flex flex-col md:flex-row  justify-between items-start w-full gap-4 md:gap-8">
           <h2 className="text-3xl sm:text-5xl leading-tight md:leading-normal max-w-md  md:max-w-lg">
             I will show you how our team works
           </h2>
