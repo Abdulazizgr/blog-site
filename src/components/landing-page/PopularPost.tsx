@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { Button } from "../ui/button";
 import BlogCard from "../blogCard";
 import data from "@/app/data/data";

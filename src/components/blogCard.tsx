@@ -1,7 +1,6 @@
 import {
   Card,
   CardContent,
-  CardDescription,
   CardFooter,
   CardHeader,
   CardTitle,
@@ -21,7 +20,7 @@ type BlogCardProps = {
 };
 
 const BlogCard = ({ blogData }: { blogData: BlogCardProps }) => {
-  const { id, title, description, image, date, tag, category } = blogData;
+  const { title, description, image, date, tag } = blogData;
 
   return (
     <div className="">

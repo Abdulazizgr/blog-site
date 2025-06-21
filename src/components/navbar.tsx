@@ -25,8 +25,7 @@ const Navbar = () => {
     { href: "/about", label: "About" },
   ];
 
-  pathname === "/" ? "/home" : pathname;
-
+  const activePath = pathname === "/" ? "/home" : pathname;
   return (
     <div className="flex justify-between items-center px-4 md:px-10 lg:px-20 py-5  bg-white ">
       <Link href="/">
@@ -50,7 +49,7 @@ const Navbar = () => {
                   key={link.label}
                   href={link.href}
                   className={`${
-                    pathname === link.href
+                    activePath === link.href
                       ? "text-primary-purple font-bold"
                       : "text-dark"
                   } hover:text-primary-purple`}
