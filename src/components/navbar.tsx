@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { Button } from "./ui/button";
-import { Search, Menu } from "lucide-react";
+import { Search, Menu, User2 } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import { useState } from "react";
 import { usePathname } from "next/navigation";
@@ -18,11 +18,12 @@ const Navbar = () => {
   const [sheetOpen, setSheetOpen] = useState(false);
 
   const pathname = usePathname();
-
+  const isLogin = true;
   const links = [
     { href: "/", label: "Home" },
     { href: "/blog", label: "Blog" },
     { href: "/about", label: "About" },
+    { href: "/contact", label: "Contact" },
   ];
 
   const activePath = pathname === "/" ? "/home" : pathname;
@@ -74,14 +75,25 @@ const Navbar = () => {
 
                   <Input className={`${isOpen ? "hidden" : "block"} w-full`} />
                 </div>
-                <div>
-                  <Button
-                    variant="default"
-                    className="bg-primary-purple hover:bg-primary-purple/90  text-white "
-                  >
-                    Contact Us
-                  </Button>
-                </div>
+                {!isLogin ? (
+                  <div>
+                    <Button
+                      variant="default"
+                      className="bg-primary-purple hover:bg-primary-purple/90  text-white "
+                    >
+                      Login
+                    </Button>
+                  </div>
+                ) : (
+                  <div>
+                    <Button
+                      variant="default"
+                      className="bg-primary-purple hover:bg-primary-purple/90  text-white "
+                    >
+                      <User2 /> Profile
+                    </Button>
+                  </div>
+                )}
               </div>
             </div>
           </SheetContent>
@@ -119,14 +131,25 @@ const Navbar = () => {
             </Button>
             <Input className={`${isOpen ? "hidden" : "block"} w-48`} />
           </div>
-          <Link href="/contact">
-            <Button
-              variant="default"
-              className="bg-primary-purple hover:bg-primary-purple/90 text-white "
-            >
-              Contact Us
-            </Button>
-          </Link>
+          {!isLogin ? (
+            <Link href="/auth/login">
+              <Button
+                variant="default"
+                className="bg-primary-purple hover:bg-primary-purple/90 text-white "
+              >
+                Login
+              </Button>
+            </Link>
+          ) : (
+            <Link href="/profile">
+              <Button
+                variant="default"
+                className="bg-primary-purple hover:bg-primary-purple/90 text-white "
+              >
+                <User2 /> Profile
+              </Button>
+            </Link>
+          )}
         </div>
       </div>
     </div>
